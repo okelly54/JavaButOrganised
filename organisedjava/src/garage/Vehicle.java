@@ -4,6 +4,7 @@ public class Vehicle {
 
 	private String name;
 	private String colour;
+	private int cost;
 	private String brand;
 	private int wheelNum;
 	private int averageSpeed;
@@ -15,6 +16,14 @@ public class Vehicle {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getCost() {
+		return cost;
+	}
+
+	public void setCost(int cost) {
+		this.cost = cost;
 	}
 
 	public String getColour() {
@@ -48,12 +57,22 @@ public class Vehicle {
 	public void setAverageSpeed(int averageSpeed) {
 		this.averageSpeed = averageSpeed;
 	}
-
 	// get set
 
-	public Vehicle(String name, String colour, String brand, int wheelNum, int averageSpeed) {
+	public void makeNoise(String noise) {
+		System.out.println(noise);
+	}
+	// noise behaviour
+
+	public void doAttack(String attackType) {
+		System.out.println(attackType);
+	}
+	// action behaviour - also known as attack because I had Mario Kart on the brain
+
+	public Vehicle(String name, String colour, int cost, String brand, int wheelNum, int averageSpeed) {
 		this.name = name;
 		this.colour = colour;
+		this.cost = cost;
 		this.brand = brand;
 		this.wheelNum = wheelNum;
 		this.averageSpeed = averageSpeed;

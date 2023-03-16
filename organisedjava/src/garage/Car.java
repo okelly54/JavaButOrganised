@@ -3,6 +3,10 @@ package garage;
 // derived class
 public class Car extends Vehicle {
 
+	public Car(String name, String colour, int cost, String brand, int wheelNum, int averageSpeed) {
+		super(name, colour, cost, brand, wheelNum, averageSpeed);
+	}
+
 	private int height;
 	private boolean seatWarmer;
 
@@ -22,8 +26,12 @@ public class Car extends Vehicle {
 		this.seatWarmer = seatWarmer;
 	} // get and set
 
-	public void honk() {
-		System.out.println("HONK HONK GET OUT THE ROAD");
+	public void noise() {
+		this.makeNoise("HONK HONK OUT THE ROAD");
+	}
+
+	public void attack() {
+		this.doAttack("BLUE SHELL INCOMING - B O N K!");
 	}
 
 }
